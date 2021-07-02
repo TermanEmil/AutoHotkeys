@@ -10,35 +10,38 @@ SetWorkingDir %A_ScriptDir%	; Ensures a consistent starting directory.
 ;	+: Shift
 
 ; Easier Home/End buttons
-!Left::send {Home}
-!Right::send {End}
-!+Left::send +{Home}
-!+Right::send +{End}
+#Left::send {Home}
+#Right::send {End}
+#+Left::send +{Home}
+#+Right::send +{End}
 
 ; Make Alt just as useful as Ctrl
-!c::send ^c
-!v::send ^v
-!x::send ^x
-!z::send ^z
-!+z::send ^+z
-!s::send ^s
-!a::send ^a
-!t::send ^t
-!+t::send ^+t
-!w::send ^w
+#c::send ^c
+#v::send ^v
+#x::send ^x
+#z::send ^z
+#+z::send ^+z
+#s::send ^s
+#a::send ^a
+#t::send ^t
+#+t::send ^+t
+#w::send ^w
+
+#+Up::send +^{Home}
+#+Down::send +^{End}
 
 ; Ctrl is just too far, so let's use Alt instead
-#Left::send ^{Left}
-#Right::send ^{Right}
-#+Left::send ^+{Left}
-#+Right::send ^+{Right}
+!Left::send ^{Left}
+!Right::send ^{Right}
+!+Left::send ^+{Left}
+!+Right::send ^+{Right}
 
-#Up::send ^{Up}
-#Down::send ^{Down}
+!Up::send ^{Up}
+!Down::send ^{Down}
 
 ; Navigation between tabs (like chrome).
-!+a::send +^{Tab}
-!+d::send  ^{Tab}
+#+a::send +^{Tab}
+#+d::send  ^{Tab}
 
 
 ; Test:
